@@ -2,9 +2,10 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function main() {
-  // Write Prisma Client queries here
-}
+/**
+ ** Write Prisma Client queries here
+ */
+async function main() {}
 
 main()
   .then(async () => {
