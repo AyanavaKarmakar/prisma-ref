@@ -11,11 +11,16 @@ async function main() {
    */
   // const user = await prisma.user.create({
   //   data: {
-  //     name: "John",
-  //     email: "johndoe@gmail.com",
+  //     name: "Alice",
+  //     email: "alice@gmail.com",
   //   },
   // });
-  //console.log(user);
+  // console.log(user);
+  /**
+   * ? query to retrieve all user records
+   */
+  // const users = await prisma.user.findMany();
+  // console.log(users);
 }
 
 main()
