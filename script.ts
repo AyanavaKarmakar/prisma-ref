@@ -26,20 +26,30 @@ async function main() {
    * ! By default, Prisma only returns scalar fields
    * ! in the result objects of a query.
    */
-  const user = await prisma.user.create({
-    data: {
-      name: "UserName",
-      email: "username@gmail.com",
-      posts: {
-        create: {
-          title: "Hello World!",
-          content: "Lorem Ipsum",
-          published: true,
-        },
-      },
+  // const user = await prisma.user.create({
+  //   data: {
+  //     name: "UserName",
+  //     email: "username@gmail.com",
+  //     posts: {
+  //       create: {
+  //         title: "Hello World!",
+  //         content: "Lorem Ipsum",
+  //         published: true,
+  //       },
+  //     },
+  //   },
+  // });
+  // console.log(user);
+  /**
+   * ? query to view post records
+   */
+  const userWithPosts = await prisma.user.findMany({
+    include: {
+      posts: true,
     },
   });
-  console.log(user);
+
+  console.log(userWithPosts);
 }
 
 main()
