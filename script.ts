@@ -6,15 +6,16 @@ const prisma = new PrismaClient();
  ** Write Prisma Client queries here
  */
 async function main() {
-  // ? query for creating a new user
-  const user = await prisma.user.create({
-    data: {
-      name: "John",
-      email: "johndoe@gmail.com",
-    },
-  });
-
-  console.log(user);
+  /**
+   * ? query for creating a new user
+   */
+  // const user = await prisma.user.create({
+  //   data: {
+  //     name: "John",
+  //     email: "johndoe@gmail.com",
+  //   },
+  // });
+  //console.log(user);
 }
 
 main()
